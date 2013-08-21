@@ -13,10 +13,11 @@ Usage
 
 ### Bot setup
 
-    node blah.js <address> <nick> <password>
+    node blah.js <address> <nick> <realname> <password>
 
 * address - IRC server address
 * nick - nickname of the bot (optional, defaults to 'blah')
+* realname - realname of the bot, for networks where it's necessary to have owner's nickname there (optional, defaults to nick)
 * password - NickServ password for the nickname (optional)
 
 ### Bot usage

@@ -4,7 +4,7 @@ var irc = require('irc');
 var myName = process.argv[3] || 'blah';
 var bot = new irc.Client(process.argv[2], myName, {
 	userName: myName,
-	realName: myName,
+	realName: process.argv[4] || myName,
 	channels: []
 });
 
@@ -13,8 +13,8 @@ var nopartner = null;
 
 bot.addListener('registered', function(message) {
 	bot.send('UMODE2', '+B');
-	if (process.argv[4]) {
-		bot.say('NickServ', 'identify ' + process.argv[4]);
+	if (process.argv[5]) {
+		bot.say('NickServ', 'identify ' + process.argv[5]);
 	}
 });
 
