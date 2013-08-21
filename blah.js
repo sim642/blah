@@ -12,6 +12,7 @@ var partners = {};
 var nopartner = null;
 
 bot.addListener('registered', function(message) {
+	bot.send('UMODE2', '+B');
 	if (process.argv[4]) {
 		bot.say('NickServ', 'identify ' + process.argv[4]);
 	}
