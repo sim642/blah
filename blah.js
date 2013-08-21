@@ -107,26 +107,3 @@ bot.addListener('error', function(message) {
 	console.error(message);
 });
 
-
-/*bot.addListener('quit', function(nick, reason, channels, message) {
-	if (nick in partners) {
-		bot.say(partners[nick], '~~~partner disconnected~~~');
-		delete partners[partners[nick]];
-		delete partners[nick];
-	}
-	else if (nopartner == nick) {
-		nopartner = null;
-	}
-});*/
-
-/*bot.addListener('nick', function(oldnick, newnick, channels, message) {
-	if (oldnick in partners) {
-		partners[newnick] = partners[oldnick];
-		partners[partners[oldnick]] = newnick;
-		delete partners[oldnick];
-	}
-	else if (nopartner == oldnick) {
-		nopartner = newnick;
-	}
-});*/
-
